@@ -1,10 +1,13 @@
 {
   "name": "package-resolve",
-  "version": "1.0.0",
+  "version": "0.9.0",
   "description": "Simple way to get the package.json for any installed package. ",
   "main": "lib/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "coffee --compile --output lib src",
+    "watch": "coffee --watch --compile --output lib src",
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -26,5 +29,7 @@
   "dependencies": {
     "jsonutil": "^0.2.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "coffeescript": "^2.0.0"
+  }
 }
