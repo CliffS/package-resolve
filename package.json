@@ -14,7 +14,8 @@
     "package",
     "package.json",
     "require",
-    "require.resolve"
+    "require.resolve",
+    "style"
   ],
   "author": "Cliff Stanford",
   "license": "Unlicense",
