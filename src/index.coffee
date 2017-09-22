@@ -9,7 +9,8 @@ class Package
 
   resolve: ->
     new Promise (resolve, reject) =>
-      path = require.resolve @module
+      Module = module.constructor
+      path = Module._resolveFilename @module, require.main
       if path? then resolve path else reject new Error 'File not found'
 
   package: ->
