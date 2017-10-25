@@ -1,6 +1,6 @@
 {
   "name": "package-resolve",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Simple way to get the package.json for any installed package. ",
   "main": "lib/index.js",
   "scripts": {
