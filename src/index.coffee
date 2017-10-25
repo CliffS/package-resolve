@@ -10,8 +10,11 @@ class Package
   resolve: ->
     new Promise (resolve, reject) =>
       Module = module.constructor
-      path = Module._resolveFilename @module, require.main
-      if path? then resolve path else reject new Error 'File not found'
+      path = try
+        Module._resolveFilename @module, require.main
+      catch
+        reject new Error 'File not found'
+      resolve path
 
   package: ->
     check = (path) ->
@@ -45,7 +48,11 @@ class Package
     ]
     .then (results) =>
       [path, pack] = results
+      throw new Error """
+        no "style" key found in #{path}
+        """ unless pack.style?
       Path.join Path.dirname(path), pack.style
+
 
   readStyle: ->
     @style()
