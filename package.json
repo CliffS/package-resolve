@@ -27,6 +27,7 @@
   },
   "homepage": "https://github.com/CliffS/package-resolve#readme",
   "dependencies": {
+    "json-util": "^3.0.0",
     "jsonutil": "^0.2.0"
   },
   "devDependencies": {
