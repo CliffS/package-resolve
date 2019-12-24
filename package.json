@@ -30,6 +30,6 @@
     "jsonutil": "^0.2.0"
   },
   "devDependencies": {
-    "coffeescript": "^2.0.0"
+    "coffeescript": "^2.4.1"
   }
 }
